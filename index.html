@@ -37,7 +37,7 @@
 <body>
 
 <!--header-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: sticky;top: 0; width: 100%;z-index: 9999;">
     <a class="navbar-brand mb-0 h1" href="">Shunsheng Zhang  (张顺生)</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,20 +49,35 @@
             <li class="nav-item active">
                 <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
             </li>
-          
+
             <li class="nav-item">
-                <a class="nav-link" href="#publications">Publications</a>
+                <a class="nav-link" href="#interestsjump">Interests</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#publicationsjump">Publications</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#Activitiesjump">Activities</a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#Honorsjump">Honors</a>
             </li>
 
         </ul>
     </div>
 </nav>
 
+<!--<div style="height: 100px;width: 100%"></div>-->
 
 <div class="panel-group" id="accordion">
     <div class="panel panel-default">
         <!--person-->
         <div class="container-fluid">
+<!--            <h1>Shunsheng Zhang </h1>-->
             <div class="row">
                 <div class="col-md-1">
                 </div>
@@ -75,17 +90,24 @@
                     </p>
 <!--                    <p>-->
                         <i>
-                            Phd Student<br>
-                            College of Computer Science and Technology/College of Artificial Intelligence/College of Software<br>
-                            Nanjing University of Aeronautics and Astronautics (NUAA)<br>
+<!--                            Phd Student<br>-->
+                            Shunsheng Zhang is currently a Phd student at College of Computer Science and Technology/College of Artificial Intelligence/College of Software,Nanjing University of Aeronautics and Astronautics (NUAA) and his supervisor is <a
+                                target="_blank" href="http://zhuyw.cn/en.htm">Youwen Zhu</a>
+                            . He received his master degree from Guangxi Normal University in 2021 (advised by  <a
+                                target="_blank" href="http://hpscrc.com/">Yuling Luo</a>). He worked at Guangxi Normal University from July 2021 to August 2022.<br>
+
                         </i>
                         Nanjing, Jiangsu,
                         China,
                         211106
                         <br>
-                        Email: shunszhang@nuaa.edu.cn
+
+                        Email: shunszhang@nuaa.edu.cn/shunszhang@163.com
+
                         <br>
-                        Here is my <a target="_blank" href="example/cv_shunsheng.pdf" target="_blank">Curriculum Vitae</a>.
+<!--                        Here is my <a target="_blank" href="example/cv_shunsheng.pdf" target="_blank">Curriculum Vitae</a>.-->
+                    <span id="interestsjump"></span>
+
 <!--                    </p>-->
                 </div>
             </div>
@@ -101,13 +123,13 @@
                         <hr size="30" color="#cfd8dc">
                         <h2>Research Interests</h2>
                         <p>
-                            I am currently a Phd student at Nanjing University of Aeronautics and Astronautics (NUAA) and my advisor is <a
-                                target="_blank" href="http://zhuyw.cn/en.htm">Youwen Zhu</a>
-                            . I received my master degree in Guangxi Normal University in 2021.
-                            I was working at Guangxi Normal University from April 2021 to August 2022. 
-                      
+                          My research interests span data privacy, information hiding, cryptography and applications, and
+                            side channel attack from hardware, etc.
+
 <!--                            <br>-->
                         </p>
+                    <span id="publicationsjump"></span>
+
 <!--                            <br>-->
                             <strong> I like programming and discussing some interesting computer technologies
                                 .</strong>
@@ -117,7 +139,7 @@
             </div>
         </div>
 
-        
+
 
         <!--    conference publications-->
         <div class="container-fluid">
@@ -125,13 +147,22 @@
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-10">
+
+
                     <div id="publications">
                         <hr size="30" color="#cfd8dc">
-                        <h2> Selected Conference Publications</h2>
-                       
+
+                        <h2> Selected Publications</h2>
+                        <div style="margin-top: 10px;margin-bottom: 10px;font-size: 20px">
+                             check out <a href="https://www.researchgate.net/profile/Shunsheng-Zhang/research">researchgate</a>  for full publication list.
+                        </div>
+
+
+                        <h3> Selected Conference Publications</h3>
+
 
                         <!--example-->
-                        <div id="conference-example">        
+                        <div id="conference-example">
                         </div>
 
                         <!--click-->
@@ -149,7 +180,7 @@
                                 for (let i = 0; i < paper['authors'].length; i++) {
                                     let author_name = paper['authors'][i]
                                     if (author_name.startsWith(name)){
-                                        paper['authors'][i] = '<b>'+name+'</b>'
+                                        paper['authors'][i] = '<b>'+paper['authors'][i]+'</b>'
                                         innerhtml += create_paper(i + 1, paper)
                                     }
                                 }
@@ -167,22 +198,29 @@
                             let papers = [
                                 {
                                     'title': 'Cryptanalysis of a Chaos-based Block Cryptosystem Using Multiple Samples Correlation Power Analysis',
-                                    'authors': ['Shunsheng Zhang*', 'Yuling Luo', 'Lvchen. Cao','and Junxiu Liu.'],
+                                    'authors': ['Shunsheng Zhang*', 'Shuming Han', 'Lvchen. Cao','and Junxiu Liu.'],
                                     'others': '19th International Conference on Trust Security and Privacy in Computing and Communications(CCF C)',
-                                    'path':'example/distributed work.pdf'
+                                    'path':'https://ieeexplore.ieee.org/document/9343098'
                                 },
                                 {
-                                    'title': 'bbbbbbbbb',
-                                    'authors': ['xxx', 'Shunsheng Zhang', 'zzzzz'],
-                                    'others': 'srdxcfjvghbkjnlkrexdyctjvgkhbjnlrdytchfjvhbkj',
-                                    'path':'example/distributed work.pdf'
+                                    'title': 'High Speed True Random Number Generator Controlled by Logistic Map',
+                                    'authors': ['Yuling Luo','Shuming Han' ,'Shunsheng Zhang*', 'Yanhu Wang','and Junxiu Liu.'],
+                                    'others': 'International Conference on High Performance Computing and Communications[Corresponding author,CCF C]',
+                                    'path':'https://ieeexplore.ieee.org/document/9780866'
                                 },
                                 {
-                                    'title': 'bbbbbbbbb3',
-                                    'authors': ['xxx', 'Shunsheng Zhang', 'zzzzz'],
-                                    'others': 'srdxcfjvghbkjnlkrexdyctjvgkhbjnlrdytchfjvhbkj',
-                                    'path':'example/distributed work.pdf'
+                                    'title': 'A Combined Features Encoding Network with Semantics Enhancement for Image Tampering Forensics',
+                                    'authors': ['Yuling Luo','Ce Liang' ,'Shunsheng Zhang*', 'and Sheng qin.'],
+                                    'others': '18th IFIP WG 11.9 International Conference on Digital Forensic [Corresponding author,CCF C]',
+                                    'path':'https://link.springer.com/chapter/10.1007/978-3-031-10078-9_6'
                                 },
+                                {
+                                    'title': 'A Combined Features Encoding Network with Semantics Enhancement for Image Tampering Forensics',
+                                    'authors': ['Yuling Luo','Ce Liang' ,'Shunsheng Zhang*', 'and Sheng qin.'],
+                                    'others': '18th IFIP WG 11.9 International Conference on Digital Forensic [Corresponding author,CCF C]',
+                                    'path':'https://link.springer.com/chapter/10.1007/978-3-031-10078-9_6'
+                                },
+
                             ]
                             let conferenceExample = document.getElementById('conference-example');
                             let innerhtml = ''
@@ -193,17 +231,7 @@
                             conferenceExample.innerHTML = innerhtml
                         </script>
 
-
-
-
-
-
-
-
-
-
-        
-        <!--    journal publications-->
+      <!------------------------------------------------------------journal publications------------------------------------------------------------>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1">
@@ -211,15 +239,15 @@
                 <div class="col-md-10">
                     <div id="XXX">
                         <hr size="30" color="#cfd8dc">
-                        <h2>Selected Journal Publications</h2>
-                        <h2></h2>
+                        <h3>Selected Journal Publications</h3>
+<!--                        <h2></h2>-->
 
                         <!--                    example-->
                         <div id="journal-example">
                             <!--[1]-->
                             <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <h6><strong style="color: red"> [1] </strong>
-                                    <a target="_blank" href="https://link.springer.80599.net/article/10.1007/s10586-021-03399-w">A secure and efficient framework for outsourcing large-scale matrix determinant and linear equations</a>
+                                    <a target="_blank" href="https://dl.acm.org/doi/10.1145/3611014">A secure and efficient framework for outsourcing large-scale matrix determinant and linear equations</a>
                                 </h6>
                                 Yuling Luo,Shiqi Zhang, <b>Shunsheng Zhang*</b>, Junxiu Liu, Yanhu Wang and Su Jiao Yang. <br>
                                 <i> ACM Transactions on Embedded Computing Systems [Corresponding author,CCF B], 2023</i><br>
@@ -249,7 +277,7 @@ Cryptographic System against Template Attack</a>
                                 Yuling Luo,Fangxiao Wang, Shanshan Xu, <b>Shunsheng Zhang*</b>,Liangjia Li, Min Su, and Junxiu Liu. <br>
                                 <i> Expert Systems with Applications, 2022 [Corresponding author,SCI]</i><br>
                             </div>
-                            
+
                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <h6><strong style="color: red"> [5] </strong>
                                     <a target="_blank" href="https://link.springer.80599.net/article/10.1007/s10586-021-03399-w">, An image encryption scheme based on block compressed sensing and Chen system</a>
@@ -259,8 +287,9 @@ Cryptographic System against Template Attack</a>
                             </div>
 
 
-                            
-                            
+
+                    <span id="Activitiesjump"></span>
+
                         </div>
 
                         <!--                    click-->
@@ -276,13 +305,13 @@ Cryptographic System against Template Attack</a>
 
 
 
-      <!--    Professional Activities-->
+      <!------------------------------------------------------------Professional Activities------------------------------------------------------------>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-10">
-                    <div id="XXX">
+                    <div id="Activities">
                         <hr size="30" color="#cfd8dc">
                         <h2>Professional Activities</h2>
                         <h2></h2>
@@ -295,8 +324,8 @@ Cryptographic System against Template Attack</a>
                                     <a target="_blank" href="https://link.springer.80599.net/article/10.1007/s10586-021-03399-w"> <b>Journal Reviewer</b> </a>
                                 </h6>
                                 IEEE Transactions on Circuits and Systems for Video Technology <br>
-                            </div>                          
-                            
+                            </div>
+
                         </div>
 
                         <!--                    click-->
@@ -312,37 +341,13 @@ Cryptographic System against Template Attack</a>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
+        <span id="Honorsjump"></span>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-10">
-                    <div id="XXX">
+                    <div id="Honors">
                         <hr size="30" color="#cfd8dc">
                         <h2>Awards & Honors</h2>
                         <h2></h2>
@@ -356,7 +361,7 @@ Cryptographic System against Template Attack</a>
                                 </h6>
 
                             </div>
-                            
+
                             <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <h6><strong style="color: red"> [IEEE Statellite'22] </strong>
                                     <strong style="color: grey">Federated Learning with Dynamic Aggregation Based on Connection Density at Satellites and Ground Stations</Strong>
@@ -364,7 +369,7 @@ Cryptographic System against Template Attack</a>
                                 <b>Shunsheng Zhang</b>, Jianlong Xu, Yusen Li, Zhuo Xu. <br>
                                 <i>2022 IEEE International Conference on Satellite Computing </i><br>
                             </div>
-                            
+
                             <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <h6>
                                     <strong style="color: grey">Distributed User Privacy Preserving Adjustable Personalized QoS Prediction Model for Cloud Services</Strong>
@@ -372,7 +377,7 @@ Cryptographic System against Template Attack</a>
                                 Jianlong Xu, <b>Shunsheng Zhang</b>, Yusen Li, Zhi Xiong. <br>
                                 <i>Chinese Journal of Network and Information Security. 2022 </i><br>
                             </div>
-                            
+
                             <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <h6><strong style="color: red"> [ICWS'22] </strong>
                                     <strong style="color: grey">A Two-Stage Federated Learning Framework via Cloud-Edge Collaboration for services QoS Prediction</Strong>
@@ -392,7 +397,7 @@ Cryptographic System against Template Attack</a>
             </div>
         </div>
 
-        
+
 
     <!--date-->
     <div class="container-fluid">
