@@ -196,6 +196,65 @@
             </div>
         </div>
 
+        <script>
+                            function create_paper(index, paper) {
+                                for (let i = 0; i < paper['authors'].length; i++) {
+                                    let author_name = paper['authors'][i]
+                                    if (author_name.startsWith(name)){
+                                        paper['authors'][i] = '<b>'+name+'</b>'
+                                        innerhtml += create_paper(i + 1, paper)
+                                    }
+                                }
+                                let author = paper['authors'].join(', ')
+                                return '                            <div class="shadow-lg p-3 mb-2 bg-white rounded">\n' +
+                                    '                                <h6>\n' +
+                                    '                                    <strong style="color: red"> [' + index + '] </strong>\n' +
+                                    '                                    <a target="_blank" href="'+paper['path']+'">' + paper['title'] + '</a >\n' +
+                                    '                                </h6>\n' +
+                                    '                                ' + author + '\n' +
+                                    '                                <br> <i> ' + paper['others'] + ' </i><br>\n' +
+                                    '                            </div>'
+                            }
+                            let name = 'Shunsheng Zhang'
+                            let papers = [
+                                {
+                                    'title': 'aaaaaaaa',
+                                    'authors': ['xxx', 'yyyy', 'zzzzz'],
+                                    'others': 'srdxcfjvghbkjnlkrexdyctjvgkhbjnlrdytchfjvhbkj',
+                                    'path':'example/distributed work.pdf'
+                                },
+                                {
+                                    'title': 'bbbbbbbbb',
+                                    'authors': ['xxx', 'Shunsheng Zhang', 'zzzzz'],
+                                    'others': 'srdxcfjvghbkjnlkrexdyctjvgkhbjnlrdytchfjvhbkj',
+                                    'path':'example/distributed work.pdf'
+                                },
+                                {
+                                    'title': 'bbbbbbbbb3',
+                                    'authors': ['xxx', 'Shunsheng Zhang', 'zzzzz'],
+                                    'others': 'srdxcfjvghbkjnlkrexdyctjvgkhbjnlrdytchfjvhbkj',
+                                    'path':'example/distributed work.pdf'
+                                },
+                            ]
+                            let conferenceExample = document.getElementById('conference-example');
+                            let innerhtml = ''
+                            for (let i = 0; i < papers.length; i++) {
+                                let paper = papers[i]
+                                innerhtml += create_paper(i + 1, paper)
+                            }
+                            conferenceExample.innerHTML = innerhtml
+                        </script>
+
+
+
+
+
+
+
+
+
+
+        
         <!--    journal publications-->
         <div class="container-fluid">
             <div class="row">
